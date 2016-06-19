@@ -1,0 +1,22 @@
+{
+  "name": "remove-most-viewed-chrome-extension",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Chrome Extension to remove the annoying most viewed pages from the Google search page.",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.google.de/*",
+        "https://www.google.de/*",
+        "http://www.google.com/*",
+        "https://www.google.com/*"
+      ],
+      "js": [
+        "contentscript.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ]
+}
